@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="adminstyles.css">
+</head>
+<body>
+
+    <nav id="navbar">
+        <button id="homeButton">Home</button>
+    </nav>
+    
+    <div id="adminContainer">
+        <h1>Admin Dashboard</h1>
+    
+        <section id="carListingsSection">
+            <h2>Car Listings</h2>
+            <div class="table-container">
+                <table id="carListAdmin">
+                    <thead>
+                        <tr>
+                            <th>VIN</th>
+                            <th>Make</th>
+                            <th>Model</th>
+                            <th>Year</th>
+                            <th>Price</th>
+                            <th>Mileage</th>
+                            <th>Status</th>
+                            <th>Lister Username</th>
+                            <th>Image</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </section>
+    
+        <section id="usersSection">
+            <h2>Users</h2>
+            <div class="table-container">
+                <table id="userList">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Username</th>
+                            <th>Is Admin</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <div id="notification" class="notification"></div>
+
+    <script src="adminscripts.js"></script>
+</body>
+</html>

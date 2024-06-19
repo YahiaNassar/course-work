@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xmoto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <img src="C:\Users\stfu1\Desktop\course work frontend\logo\xmoto-high-resolution-logo-transparent.png" alt="Car Auctioning Service Logo" class="logo">
+        <div class="navbar-links">
+            <a href="Location.html">Location</a>
+            <a href="help.html">Help</a>
+            <a href="MyListings.html">My_Listings</a>
+            <a href="MyBids.html">My_Bids</a>
+            <!-- <a href="#">Categories</a>
+            <a href="#">Specials</a> -->
+        </div>
+        <div class="navbar-buttons">
+            <button id="addCarButton">Add a Listing</button>
+            <button id="logoutButton">Log in</button>
+            <button id="button1">Log out</button>
+            <button id="Admin-Page" style="display: none;">Move to Admin</button>
+        </div>
+    </nav>
+
+
+    <main>
+        <div id="filterModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Filters</h2>
+                <div class="sidebar">
+                    <div class="filter">
+                        <label for="manufacturer">Manufacturer:</label>
+                        <input type="text" id="manufacturerFilter">
+                    </div>
+                    <div class="filter">
+                        <label for="model">Model:</label>
+                        <input type="text" id="modelFilter">
+                    </div>
+                    <div class="filter">
+                        <label for="year">Year:</label>
+                        <input type="number" id="yearFilter">
+                    </div>
+                    <div class="filter">
+                        <label for="price">Price:</label>
+                        <div class="price-range">
+                            <input type="number" id="minPrice" placeholder="Min" min="0">
+                            <input type="number" id="maxPrice" placeholder="Max" min="0">
+                        </div>
+                    </div>
+                    <button id="applyFilterButton">Apply Filters</button> <!-- New button -->
+                </div>
+            </div>
+        </div>
+    
+        <div class="container">
+            <div class="title-search-container">
+                <h2 class="page-title">Active Car Listings</h2>
+                <div class="search-bar">
+                    <input type="text" id="searchBar" placeholder="Search...">
+                    <button id="searchButton">Search</button>
+                    <button id="openFilterModalButton">Filters</button>
+                </div>
+            </div>
+            <div id="carList" class="car-list"></div>
+        </div>
+    </main>
+    <!-- <footer>
+        <p>&copy; 2024 Xmoto Ltd.</p>
+    </footer> -->
+
+    <!-- Modal for adding a new car listing -->
+    <div id="addCarModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add a New listing</h2>
+            <form id="addCarForm">
+                <div>
+                    <label for="make">Vehicle Identification Number (VIN):</label>
+                    <input type="text" id="vin" name="vin" required>
+                </div>
+                <div>
+                    <label for="model">Manufacturer:</label>
+                    <input type="text" id="make" name="make" required>
+                </div>
+                <div>
+                    <label for="year">Model:</label>
+                    <input type="text" id="model" name="model" required>
+                </div>
+                <div>
+                    <label for="price">Year :</label>
+                    <input type="number" id="year" name="year" required>
+                </div>
+                <div>
+                    <label for="image">Image URL:</label>
+                    <input type="url" id="image" name="image" required>
+                </div>
+                <div>
+                    <label for="milage">milage :</label>
+                    <input type="text" id="milage" name="milage" required>
+                </div>
+                <div>
+                    <label for="price">initial price :</label>
+                    <input type="number" id="price" name="price" required>
+                </div>
+                <!-- <div>
+                    <label for="model">Description :</label>
+                    <input type="text" id="description" name="description">
+                </div> -->
+                <button type="submit" id="submit-btn">Add Listing</button>
+            </form>
+        </div>
+    </div>
+    <!-- Modal for logging in -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+    <div id="notification" class="notification"></div>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.4/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/read-excel-file/5.2.0/read-excel-file.min.js"></script> -->
+    <script src="scripts.js"></script>
+    <script>
+        
+    </script>
+        
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Car Details</title>
+    <link rel="stylesheet" type="text/css" href="detailsstyles.css">
+</head>
+<body>
+    <header>
+        <h1>Car Details</h1>
+    </header>
+    <main>
+        <img src="" id="car-image" class="car-image">
+        <h2 id="make"></h2>
+        <h2 id="model"></h2>
+        <p id="year"></p>
+        <p id="price"></p>
+        <p id="description">The description should appear here and be part of the listing data.</p>
+        
+        <h2 style="display: inline-block;">Previous Bids</h2>
+        <div id="bid-header-container">
+            <button style="display: inline-block; margin-left: 10px;" class="details-btn" id="make-bid">Bid Now</button>
+            <button style="display: none; margin-left: 10px;" class="details-btn" id="end-auction">End Auction and Mark as Sold</button>
+        </div>
+        <table id="bid-table">
+            <thead>
+                <tr>
+                    <th>Bidder</th>
+                    <th>Bid Amount</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody id="bid-table-body">
+                <!-- Bid data will be inserted here dynamically -->
+            </tbody>
+        </table>
+    </main>
+    <!-- <footer>
+        <p>&copy; 2024 Xmoto Ltd.</p>
+    </footer> -->
+    <!-- Bid Modal -->
+
+    <div id="bidModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Place Bid</h2>
+            <form id="bidForm">
+                <label for="bidAmount">Your Bid Amount:</label>
+                <input type="number" id="bidAmount" name="bidAmount" required>
+                <button type="submit">Submit Bid</button>
+            </form>
+        </div>
+    </div>
+    <script src="detailscripts.js"></script>
+</body>
+</html>

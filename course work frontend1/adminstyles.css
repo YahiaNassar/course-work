@@ -1,0 +1,126 @@
+/* Reset styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+/* Navbar styles */
+#navbar {
+    width: 100%;
+    background-color: #d3d3d3; /* Light grey background */
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: center; /* Center the button */
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+
+#navbar button {
+    background-color: #271db8;
+    border: none;
+    color: white;
+    padding: 10px 40px; /* Make the button wider */
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px; /* Increase font size */
+}
+
+#navbar button:hover {
+    background-color: #1140eb;
+}
+
+/* Container styles */
+#adminContainer {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 1000px;
+    margin: 80px 20px 20px 20px; /* Add margin to avoid overlapping with navbar */
+    z-index: 1;
+}
+
+/* Heading styles */
+h1 {
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+/* Notification styles */
+.notification {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    z-index: 2;
+}
+
+.notification.error {
+    background-color: #f44336;
+    color: white;
+}
+
+.notification.success {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Table styles */
+.table-container {
+    overflow-x: auto;
+    margin-top: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+/* Button styles */
+button {
+    padding: 8px 12px;
+    background-color: #f44336;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 2px;
+}
+
+button:hover {
+    background-color: #d32f2f;
+}
+
+/* Make image fit within cell */
+table img {
+    max-width: 100px;
+    max-height: 100px;
+    width: auto;
+    height: auto;
+}
